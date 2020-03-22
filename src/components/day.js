@@ -3,7 +3,7 @@ import { Droppable } from 'react-beautiful-dnd';
 
 import Item from './task';
 
-export const Day = (props) => {
+export default (props) => {
   let totalHours = 0;
   let totalHoursClass = "dayTotalHours";
   for(let item of props.items){

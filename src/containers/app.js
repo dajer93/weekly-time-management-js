@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Week } from '../components/week';
+import { updateWeek } from "../actions";
+import Week from '../components/week';
 
 class App extends Component {
 
   render() {
-    console.log(this.props);
-    return <Week />;
+    const { week, onUpdateWeek } = this.props;
+    return <Week week={week} onDragEnd={onUpdateWeek} />;
   }
 }
 
 const mapStateToProps = state => ({
   week: state.week
-})
+});
 
-// const mapDispatchToProps = dispatch => ({
-//   onLogin: credentials => dispatch(login(credentials))
-// })
+const mapDispatchToProps = dispatch => ({
+  onUpdateWeek: result => dispatch(updateWeek(result))
+});
 
-export default connect(
-  mapStateToProps
-  // mapStateToProps,
-  // mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
