@@ -22,12 +22,11 @@ export default (props) => {
             {...provided.droppableProps}
             ref={provided.innerRef}
           >
-            {props.items.map((item, index) => <Item key={item.id} item={item} index={index} />)}
+            {props.items.map((item, index) => <Item key={item.id} item={item} index={index} onRemove={props.onRemove} />)}
             {provided.placeholder}
           </div>
         )}
       </Droppable>
-      <button>Add task</button>
     </div>
   );
 }

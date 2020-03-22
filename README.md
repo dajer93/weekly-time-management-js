@@ -5,10 +5,10 @@ This is a small application which helps me planning my weeks.
 The basic idea is an application similar to a trello board. It has 7 columns (days), each column consists of 24 hours. You can assign cards to each day, and each card has an attribute of estimated time it takes. For instance, you would add these cards for the monday column: work (8.5 hours), commuting (1.5 hours), workout (3 hours), sleep (8 hours), cook & eat dinner (1 hour), freetime (2 hours).
 
 ### Todo: 
-- Change item hour estimation
-- Change item title
 - Add item to day
 - Remove item from day
+- Change item hour estimation
+- Change item title
 - Activity pool
 - Add item to activity pool
 - Remove item from activity pool

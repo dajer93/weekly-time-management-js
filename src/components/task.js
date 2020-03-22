@@ -14,6 +14,7 @@ export default (props) => {
           ref={provided.innerRef}
         >
           <TaskTitle title={props.item.content} />
+          <button id={props.item.id} onClick={props.onRemove}>remove</button>
           <div className="itemTime">{props.item.time} hours</div>
         </div>
       )}

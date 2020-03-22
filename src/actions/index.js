@@ -1,5 +1,7 @@
-import { updateWeek } from './week';
+import { updateWeek, removeTask, addTask } from './week';
 
 export {
-  updateWeek
+  updateWeek,
+  removeTask,
+  addTask
 };
