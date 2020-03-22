@@ -1,0 +1,31 @@
+.create-task {
+  position: relative;
+  bottom: 0;
+
+  & input{
+    border: 2px solid #10e02099;
+    padding: .8em .4em;
+    font-size: 16px;
+    max-width: 136px;
+  }
+
+  & input[name="time"]{
+    max-width: 30px;
+  }
+
+  & button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

@@ -3,15 +3,12 @@ import { connect } from 'react-redux';
 
 import { updateWeek, removeTask, addTask } from "../actions";
 import Week from '../components/week';
-import CreateTask from '../components/create-task';
-
 class App extends Component {
 
   render() {
     const { week, onUpdateWeek, onRemoveTask, onAddTask } = this.props;
     return <>
-      <Week week={week} onDragEnd={onUpdateWeek} onRemove={onRemoveTask} />
-      <CreateTask day="wednesday" createTask={onAddTask} />
+      <Week week={week} onDragEnd={onUpdateWeek} onRemove={onRemoveTask} onAdd={onAddTask} />
     </>
   }
 }

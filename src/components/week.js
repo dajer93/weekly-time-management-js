@@ -11,7 +11,7 @@ export default (props) =>  {
         {Object.keys(week.days).map(dayId => {
           const day = week.days[dayId];
           const items = day.itemIds.map(itemId => week.items[itemId]);
-          return <Day key={day.id} day={day} items={items} onRemove={onRemove} onAdd={onAdd} />;
+          return <Day key={day.id} day={day} items={items} onRemove={onRemove} onAddTask={onAdd} />;
         })}
       </DragDropContext>
     </div>

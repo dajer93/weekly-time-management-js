@@ -1,3 +1,43 @@
+export const initialEmptyData = {
+    items: {},
+    days: {
+        'monday': {
+            id: 'monday',
+            title: 'Monday',
+            itemIds: [] 
+        },
+        'tuesday': {
+            id: 'tuesday',
+            title: 'Tuesday',
+            itemIds: [] 
+        },
+        'wednesday': {
+            id: 'wednesday',
+            title: 'Wednesday',
+            itemIds: [] 
+        },
+        'thursday': {
+            id: 'thursday',
+            title: 'Thursday',
+            itemIds: [] 
+        },
+        'friday': {
+            id: 'friday',
+            title: 'Friday',
+            itemIds: [] 
+        },
+        'saturday': {
+            id: 'saturday',
+            title: 'Saturday',
+            itemIds: [] 
+        },
+        'sunday': {
+            id: 'sunday',
+            title: 'Sunday',
+            itemIds: [] 
+        }
+    }
+}
 export const initialWeeklyData = {
   items: {
       "item-1": { id: 'item-1', content: 'Workout', time: 3 },

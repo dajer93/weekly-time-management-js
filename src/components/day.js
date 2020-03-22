@@ -2,6 +2,8 @@ import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
 
 import Item from './task';
+import CreateTask from './create-task';
+
 
 export default (props) => {
   let totalHours = 0;
@@ -24,9 +26,11 @@ export default (props) => {
           >
             {props.items.map((item, index) => <Item key={item.id} item={item} index={index} onRemove={props.onRemove} />)}
             {provided.placeholder}
+            <div>{`~ ${24-totalHours} of sleep`}</div>
           </div>
         )}
       </Droppable>
+      <CreateTask day={props.day.id} createTask={props.onAddTask} />
     </div>
   );
 }

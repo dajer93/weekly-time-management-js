@@ -3,10 +3,10 @@ import {
   REMOVE_TASK,
   ADD_TASK 
 } from "../actionTypes";
-import { initialWeeklyData } from "../initial-data";
+import { initialEmptyData } from "../initial-data";
 import uniqid from "uniqid";
 
-export default function moviesReducer(state = initialWeeklyData, action) {
+export default function moviesReducer(state = initialEmptyData, action) {
   switch (action.type) {
     case REMOVE_TASK: 
       console.log(action.payload.target.id)
