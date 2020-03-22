@@ -1,0 +1,48 @@
+.week {
+  display: flex;
+
+  & .dayWrapper{
+      min-width: 200px;
+      background: #eee;
+      margin: 0 10px;
+      padding: 8px;
+
+      & .dayTitle{
+          margin: 8px 0 0;
+      }
+
+      & .dayTotalHours{
+          margin: 0 0 6px;
+          font-size: 14px;
+          font-weight: normal;
+
+          &.moreThan24 {
+              color: red;
+              text-decoration: underline;
+          }
+          &.perfect {
+              color: green;
+              font-weight: bold;
+          }
+      }
+
+      & .dayContent {
+          min-height: 400px;
+
+          & .item {
+              margin: 4px 0;
+              padding: 10px 8px;
+              background: #aecde0;
+              border: 1px solid paleturquoise;
+              & .itemTitle{
+                  font-weight: bold;
+              }
+
+              &.dragging{
+                  border: 1px solid palegreen;
+              }
+          }
+      }
+      
+  }
+}
