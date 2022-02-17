@@ -70,10 +70,11 @@ export default function moviesReducer(state = initialEmptyData, action) {
       if (dayDragStart === dayDragFinish) {
         const newItemIds = Array.from(dayDragStart.itemIds);
         newItemIds.splice(source.index, 1);
+        newItemIds.splice(destination.index, 0, dayDragStart.itemIds[source.index]);
 
         const newDayStart = {
           ...dayDragStart,
-          itemIds: newItemIds
+          itemIds: newItemIds.filter(elem => !!elem)
         };
         return {
           ...state,
